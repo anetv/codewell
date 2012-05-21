@@ -1,0 +1,69 @@
+to codewell [
+	to semicircle repeat 180 [fd .1 rt 1] end
+	to smallcircle repeat 360 [fd .01 rt 1] end
+	to smallsemicircle repeat 180 [fd .05 rt 1] end
+	to smallleftsemicircle repeat 180 [fd .05 lt 1] end
+	to circle repeat 360 [fd .1 rt 1] end
+	to randomcolor setcolor pick [ black red orange yellow green blue violet ] end
+	penup
+	lt 90 fd 200
+	pendown
+	rt 90 fd 20 lt 90 fd 5 rt 180 fd 10
+	penup
+	fd 5
+	pendown
+	rt 90 fd 20 rt 180 semicircle lt 90
+	penup
+	fd 5
+	pendown
+	lt 90 fd 10 penup fd 3 lt 90 pendown smallcircle lt 180
+	penup
+	fd 5 rt 90 fd 5 rt 180
+	pendown
+	smallsemicircle rt 180 smallleftsemicircle lt 40 fd 9 rt 40 smallsemicircle
+	penup
+	rt 90 fd 20
+	pendown
+	lt 90 fd 10 penup fd 3 lt 90 pendown smallcircle lt 180
+	penup
+	fd 5 rt 90 fd 5 rt 180
+	pendown
+	smallsemicircle rt 180 smallleftsemicircle lt 40 fd 9 rt 40 smallsemicircle
+	penup
+	rt 90 fd 20 lt 90 fd 3
+	pendown
+	semicircle semicircle semicircle fd 10 semicircle
+	penup
+	fd 10 rt 90 fd 15  lt 90
+	pendown
+	semicircle semicircle
+	penup
+	rt 90 fd 15 lt 90
+	pendown
+	semicircle semicircle
+	penup
+	rt 90 fd 15 lt 90
+	pendown
+	semicircle semicircle penup  rt 90 fd 11 lt 90 pendown fd 15 bk 21
+	penup
+	rt 90 fd 20 lt 90 fd 9 lt 40 pendown repeat 270 [fd .1 lt 1]
+	penup
+	rt 50 fd 7 lt 160
+	pendown
+	semicircle semicircle
+	penup
+	rt 125 fd 13 lt 65 bk 1
+	pendown
+	semicircle semicircle penup rt 90 fd 11 lt 90 pendown fd 15 bk 21
+	penup
+	rt 90 fd 5 lt 90 fd 7
+	pendown
+	semicircle rt 90 fd 11 lt 70 repeat 160 [fd .1 lt 1]
+	penup
+	rt 90 fd 6
+	pendown
+	smallcircle
+	penup
+	fd 60 rt random 360 fd 140 randomcolor
+] end
+repeat 60 codewell
